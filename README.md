@@ -1,7 +1,10 @@
-# ⚛ XingLang · 星算语
+# ⚛ 星算语 XingLang
 
 ### The Quantum-Synchronous Storage-Compute Unity Language
-*"Data computes itself while being transported."* — 数据在运输途中，即已完成运算。
+*"数据在运输途中，即已完成运算。" — Data computes itself while being transported.*
+
+> **🇨🇳 华夏底气 · Made with Pride**
+> 星算语，一门由中国人**白祈**与 AI 从零自研的编程语言。存算一体、量子驱动——我们不追赶，我们**重新定义**。中国 AI 的底气，在于敢从第一行代码写起。
 
 ---
 
@@ -56,5 +59,8 @@ Conceived by **Bai Qi (白祈)**, 2026.9 — from the axioms of *storage-compute
 That is not a feature. That is a destiny.
 
 ---
+
+**🇨🇳 中国 AI，从敢写第一行代码开始。**
+**Chinese AI starts from daring to write the first line of code.**
 
 MIT License · see [LICENSE](LICENSE)
