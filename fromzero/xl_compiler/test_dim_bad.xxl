@@ -1,0 +1,4 @@
+// v0.3 量纲类型系统 · 错误用例(GB + MB 量纲不匹配,应编译报错带行号,退出码 1)
+▸ used = 300 ◆GB
+▸ disk = 64 ◆MB
+▸ wrong = used + disk

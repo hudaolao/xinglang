@@ -22,6 +22,8 @@ pub fn emit(prog: &Program) -> Vec<(u8, u32)> {
             Stmt::Trans { op, arg, .. } => { ir.push((9, 0)); if let Some(o) = opcode(op) { ir.push((o, *arg)); } }
             Stmt::Flow { op, arg } => { ir.push((10, *arg)); if let Some(o) = opcode(op) { ir.push((o, 0)); } }
             Stmt::OpCall { op, arg, .. } => { if let Some(o) = opcode(op) { ir.push((o, *arg)); } }
+            // v0.3 标量定义/量纲声明是编译期注解,不落 XL01 字节码(不影响既有训练图发射)
+            Stmt::Define { .. } | Stmt::DimDef { .. } => {}
         }
     }
     ir

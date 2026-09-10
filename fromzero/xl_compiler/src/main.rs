@@ -1,6 +1,6 @@
 // 星算语专用编译器 · 入口
 // 用法: xl_compiler [源码文件]   -> 生成 out.xlbin (XL01 字节码),供 Rust 校验器门禁
-mod lexer; mod ast; mod parser; mod ir; mod gate;
+mod lexer; mod ast; mod parser; mod ir; mod gate; mod type_system;
 use std::io::Write;
 use std::path::Path;
 
@@ -18,6 +18,12 @@ fn main() {
     // 编译期门禁:▸ 顺序 + 资源预算(编译失败则拿不到字节码产物)
     match gate::check(&prog) {
         Ok(b) => println!("== 门禁通过: 预算 mem={}B flops={} bw={}B ==", b.mem, b.flops, b.bw),
+        Err(e) => { eprintln!("{}", e); std::process::exit(1); }
+    }
+
+    // v0.3 量纲类型系统: 编译期量纲传播 + 不匹配拦截(带行号;失败则拿不到字节码产物)
+    match type_system::check(&prog) {
+        Ok(()) => println!("== 量纲门禁通过: 表达式量纲自洽 =="),
         Err(e) => { eprintln!("{}", e); std::process::exit(1); }
     }
 

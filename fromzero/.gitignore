@@ -12,3 +12,6 @@ __pycache__/
 corpus_*.txt
 out/
 
+
+c_core/_filter_corpus.py
+c_core/_fix_sampling.py

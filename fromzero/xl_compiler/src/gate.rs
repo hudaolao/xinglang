@@ -38,7 +38,8 @@ pub fn check(prog: &Program) -> Result<Budget, String> {
         // 2. 资源预算累加
         let op = match st {
             Stmt::Trans { op, .. } | Stmt::Flow { op, .. } | Stmt::OpCall { op, .. } => ir::opcode(op),
-            Stmt::Pos(_) => None,
+            // v0.3 标量定义/量纲声明不计资源预算(无算子)
+            Stmt::Pos(_) | Stmt::Define { .. } | Stmt::DimDef { .. } => None,
         };
         if let Some(o) = op {
             let (m, f, bw) = cost(o);

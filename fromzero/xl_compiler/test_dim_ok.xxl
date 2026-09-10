@@ -1,0 +1,11 @@
+// v0.3 量纲类型系统 · 正确用例(应编译通过,退出码 0)
+// ① 量纲声明 + 同量纲加减
+▸ budget = 512 ◆GB
+▸ used = 300 ◆GB
+▸ remain = budget - used
+// ② 数字与带量纲相加 → 继承量纲
+▸ remain2 = remain + 16
+// ③ 乘除:异量纲导出(不报错,记为无量纲)
+▸ rate = budget / used
+// ④ 幂保留左量纲
+▸ squared = budget ^ 2
