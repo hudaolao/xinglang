@@ -1,0 +1,15 @@
+{
+  "bench": "P0-1 C核分块matmul",
+  "N": 512,
+  "BS": 32,
+  "threads": 12,
+  "bits_equal": true,
+  "maxerr": 0.0,
+  "golden_hash": "efd369beca5c7ed5",
+  "flops": 268435456,
+  "serial_ms": 487.0,
+  "parallel_ms": 78.0,
+  "speedup": 6.24,
+  "date": "2026-09-10",
+  "note": "确定性并行基准:单线程与多线程逐位一致。所有实现(gcc/rustc/星算语自研)跑同一输入须吐同一golden哈希。"
+}

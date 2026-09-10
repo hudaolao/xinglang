@@ -1,0 +1,31 @@
+{
+  "name": "train_vm_golden",
+  "desc": "字节码执行器VM · 训练级XL01 · 因果线性注意力 · 五项哈希golden",
+  "spec": "spec/xinglang_v02_training_ir.md",
+  "ir": "train_front/out/train_step.xlbin",
+  "ir_hash": "6bd2476d90167c31",
+  "params": {
+    "V": 32,
+    "D": 32,
+    "L": 16,
+    "steps": 40
+  },
+  "budget_bytes": {
+    "params": 20480,
+    "opt": 40960,
+    "act": 83968,
+    "runtime": 12480,
+    "peak": 157888
+  },
+  "loss": {
+    "first": 3.580809,
+    "last": 1.381804
+  },
+  "hashes": {
+    "bytecode": "962f900298498478",
+    "budget": "901866b390bdd703",
+    "trace": "e14bde70ae562db0",
+    "reduction": "3a3ba78c9e7562a5",
+    "loss_seq": "bb742e7e70a1b970"
+  }
+}

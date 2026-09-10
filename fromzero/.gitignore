@@ -1,0 +1,14 @@
+﻿*.exe
+*.o
+*.dll
+*.pdb
+*.xlbin
+target/
+bin/
+obj/
+Debug/
+Release/
+__pycache__/
+corpus_*.txt
+out/
+

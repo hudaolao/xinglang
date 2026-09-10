@@ -1,0 +1,61 @@
+# 星算语 fromzero · cost.toml v0.1
+# 独立版本化的算子资源代价表(内存B上界 / FLOPs / 带宽B)
+# Rust 校验器做编译期预算累加:累计超过预算 → 编译失败。
+# 预算 diff:本表与各前端/内核实现的内联 cost 误差 >5% 视为不一致,编译失败。
+
+version = "0.1"
+
+[ops.matmul]
+mem = 65536
+flops = 2000000
+bw = 131072
+
+[ops.add]
+mem = 4096
+flops = 4096
+bw = 8192
+
+[ops.layernorm]
+mem = 8192
+flops = 24576
+bw = 8192
+
+[ops.softmax]
+mem = 8192
+flops = 32768
+bw = 8192
+
+[ops.cross_entropy]
+mem = 4096
+flops = 8192
+bw = 4096
+
+[ops.qreg]
+mem = 1024
+flops = 1024
+bw = 1024
+
+[ops.H]
+mem = 0
+flops = 1024
+bw = 0
+
+[ops.pos]   # ▸ noop:零内存,但必须产生 trace
+mem = 0
+flops = 0
+bw = 0
+
+[ops.trans] # ↦ 精度标记
+mem = 8192
+flops = 16384
+bw = 8192
+
+[ops.flow]  # ⟶ 块级流:零驻留内存
+mem = 0
+flops = 0
+bw = 8192
+
+[ops.adamw]
+mem = 16384
+flops = 49152
+bw = 16384

@@ -1,0 +1,22 @@
+{
+  "contract": "星算语 fromzero P1 执行内核算子 golden",
+  "date": "2026-09-10",
+  "seed": 42,
+  "n": 8,
+  "pcg32_contract_first6": [
+    "0x7f7aa885",
+    "0xaf88544a",
+    "0xdbdfefb8",
+    "0xdc5aabb0",
+    "0xbd67d2db",
+    "0x7dd7d086"
+  ],
+  "ops": {
+    "add": "52e7bcba",
+    "layernorm": "48721471",
+    "softmax": "5ef3f926",
+    "cross_entropy_loss": 2.0346694,
+    "adamw": "571cb2f0"
+  },
+  "note": "确定性:固定归约序 + 合同PCG32(64位xorshifted)输入 + FNV-1a浮点哈希。PCG32 与 P0-5 qreg_seed_contract 逐位一致。C核实现 c_core/ops_core.c"
+}
