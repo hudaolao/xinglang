@@ -1,0 +1,30 @@
+# ∴ 星算语 · E盘存算一体空间 · 实机试跑
+# 存算一体：数据在读取的瞬间，变换已在流径上完成 —— E盘空余化作内存的延伸
+# 原语常量：K=1024 · M=2^20 · G=2^30（存算一体符号，与 tri-drive 训练同源）
+
+# ── 一、存算一体池 · 物理内存与存储同源 ──
+▸phys  = 32 * G       # 物理内存 32GB
+▸pageE = 16 * G       # E盘页文件（虚拟内存）当前 16GB
+▸cache = 4.7 * G      # E盘训练断点热缓存 4.7GB
+▸freeE = 154 * G      # E盘待激活空余 154GB
+
+# ── 二、页文件 16→32GB 扩展后的存算一体池 ──
+▸poolCur = phys + pageE + cache              # 当前池
+▸poolExt = phys + 2 * pageE + cache          # 扩展池（页文件翻倍）
+▸gain    = (poolExt - poolCur) / G           # 增量 GB
+▸act     = (2 * pageE + cache) / (freeE + cache) * 100   # 空余激活率
+
+# ── 三、存算一体内禀拍：一次读取 = 一次演化（运输即运算）──
+▸pool := poolExt ↦ @ + G     # 读一次池增 1GB，模拟热数据驻留
+
+# ── 四、结果输出（先算中间量）──
+▸r0 = poolCur / G
+▸r1 = poolExt / G
+▸r2 = gain
+▸r3 = act
+! r0
+! r1
+! r2
+! r3
+! pool
+! pool
