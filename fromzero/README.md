@@ -1,5 +1,25 @@
 # ⚛ 星算语 XingLang · fromzero 基座工程
 
+**语言源头 · 10 大编程基因汇合 | 工具链 · 全自研编译器栈**
+
+[![C](https://img.shields.io/badge/语言源头-C-A3D5E8)](#)
+[![C#](https://img.shields.io/badge/语言源头-C%23-A3D5E8)](#)
+[![Rust](https://img.shields.io/badge/语言源头-Rust-A3D5E8)](#)
+[![Python](https://img.shields.io/badge/语言源头-Python-A3D5E8)](#)
+[![Lisp](https://img.shields.io/badge/语言源头-Lisp-A3D5E8)](#)
+[![Haskell](https://img.shields.io/badge/语言源头-Haskell-A3D5E8)](#)
+[![Erlang](https://img.shields.io/badge/语言源头-Erlang-A3D5E8)](#)
+[![APL](https://img.shields.io/badge/语言源头-APL-A3D5E8)](#)
+[![Q#](https://img.shields.io/badge/语言源头-Q%23-A3D5E8)](#)
+[![J](https://img.shields.io/badge/语言源头-J-A3D5E8)](#)
+
+[![compiler](https://img.shields.io/badge/工具链-Compiler-A3D5E8)](#)
+[![exec-core](https://img.shields.io/badge/工具链-C%20Core-A3D5E8)](#)
+[![openmp](https://img.shields.io/badge/工具链-OpenMP-A3D5E8)](#)
+[![cargo](https://img.shields.io/badge/工具链-Cargo-A3D5E8)](#)
+[![dotnet](https://img.shields.io/badge/工具链-.NET-A3D5E8)](#)
+[![llvm](https://img.shields.io/badge/工具链-LLVM-A3D5E8)](#)
+
 **多源头存算一体语言 + 从零随机初始化训练全新基座。**
 
 从零手搓一门**存算一体**的新语言——统一 XL01 字节码、**多语言源头汇合**、训练级执行器、确定性并行、golden 哈希验收。核心目标:**语言的尽头就是模型**——10M 参数线性注意力基座 + BM25 检索流。
